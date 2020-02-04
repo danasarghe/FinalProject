@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title Shoe Store</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        body {
+            background-image: url("Images/adidas.png");
+            background-color: lavender;
+            background-size: cover;
+            
+        }
+    </style>
+
+</head>
+<body>
+   
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                        <button type="button" class="navbar-toggler-icon" data-toggle="collapse" aria-controls="navbarColor01" data-target=".navbar-collapse">
+
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <form>
+                            <button class="btn btn-dark my-2 my-sm-0 bs-tooltip-left" type="submit">Sign in</button>
+                        </form>
+
+                        @Html.ActionLink("Shoe Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("Brands", "Index", "Brands")</li>
+                            <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                            <li>@Html.ActionLink("Genres", "Index", "Genres")</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Shoe Store</p>
+                    <div>
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#">&laquo;</a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">4</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">5</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">6</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="badge badge-pill badge-success">Facebook</span>
+                    <span class="badge badge-pill badge-success">Twitter</span>
+                    <span class="badge badge-pill badge-success">Instagram</span>
+                    <span class="badge badge-pill badge-success">Blog</span>
+
+                </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+</body>
+</html>
