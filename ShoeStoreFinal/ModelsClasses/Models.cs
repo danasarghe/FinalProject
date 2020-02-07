@@ -28,7 +28,7 @@ namespace ModelsClasses
 
         [Column(Order = 2)]
         public string Description { get; set; }
-        public List<Product> Products { get; set; }
+        //public List<Product> Products { get; set; }
 
     }
 
@@ -49,8 +49,8 @@ namespace ModelsClasses
         public decimal Price { get; set; }
         [Column(Order = 5)]
         public int Size { get; set; }
-        public virtual Genre Genre { get; set; }
-        public virtual Brand Brand { get; set; }
+        //public virtual Genre Genre { get; set; }
+        //public virtual Brand Brand { get; set; }
 
     }
 
@@ -82,8 +82,8 @@ namespace ModelsClasses
         public string Phone { get; set; }
         [Column(Order = 10)]
         public decimal Total { get; set; }
-        [Column(Order = 11)]
-        public List<OrderDetail> OrderDetails { get; set; }
+        
+        //public List<OrderDetail> OrderDetails { get; set; }
 
     }
 
@@ -102,9 +102,9 @@ namespace ModelsClasses
         public int Quantity { get; set; }
         [Column(Order = 4)]
         public decimal UnitPrice { get; set; }
-        [Column(Order = 5)]
-        public virtual Product Product { get; set; }
-        public virtual Order Order { get; set; }
+       
+        //public virtual Product Product { get; set; }
+        //public virtual Order Order { get; set; }
 
     }
     [Table("Cart")]
@@ -120,8 +120,8 @@ namespace ModelsClasses
         public int ProductId { get; set; }
         [Column(Order = 3)]
         public int Count { get; set; }
-        [Column(Order = 4)]
-        public virtual Product Product { get; set; }
+        
+        //public virtual Product Product { get; set; }
     }
 
     [Table("User")]
