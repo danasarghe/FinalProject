@@ -8,7 +8,7 @@ namespace ModelsClasses
     [Table("Brand")]
     public class Brand
     {
-        //Brand brand = new Brand();
+       
         [Key]
         [Column(Order = 0)]
         public int Brandid { get; set; }
@@ -124,4 +124,26 @@ namespace ModelsClasses
         public virtual Product Product { get; set; }
     }
 
+    [Table("User")]
+    public class User
+    {
+        [Key]
+        [Column(Order = 0)]
+        public int Id { get; set; }
+        [Column(Order = 1)]
+        public string UserName { get; set; }
+        [Column(Order = 2)]
+        public string Email { get; set; }
+        [Column(Order = 3)]
+        public string Description { get; set; }
+       
+
+        public enum Role
+        {
+            Guest = 1,
+            User = 2,
+            Admin = 3
+
+        }
+    }
 }

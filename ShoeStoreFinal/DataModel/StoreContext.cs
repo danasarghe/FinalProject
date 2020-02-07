@@ -21,6 +21,7 @@ namespace DataModel
         public virtual DbSet<Cart> Carts { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -34,6 +35,7 @@ namespace DataModel
             modelBuilder.Entity<Cart>().ToTable("Cart", "dbo");
             modelBuilder.Entity<Order>().ToTable("Order", "dbo");
             modelBuilder.Entity<OrderDetail>().ToTable("OrderDetail", "dbo");
+            modelBuilder.Entity<User>().ToTable("User", "dbo");
         }
     }
 }

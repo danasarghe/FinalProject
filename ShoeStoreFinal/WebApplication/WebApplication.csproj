@@ -136,6 +136,7 @@
     <Compile Include="Controllers\OrderDetailsController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -150,6 +151,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\adidas.jpg" />
     <Content Include="Content\Images\adidas.png" />
+    <Content Include="Content\Images\pexels-photo-2065747.jpeg" />
+    <Content Include="Content\Images\pexels-photo-2231435.jpeg" />
     <Content Include="Content\minishop\minishop\about.html" />
     <Content Include="Content\minishop\minishop\blog-single.html" />
     <Content Include="Content\minishop\minishop\blog.html" />
@@ -692,8 +695,12 @@
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Views\Home\Images\adidas.jpg" />
     <Content Include="Views\Home\Images\adidas.png" />
+    <Content Include="Views\Home\Images\pexels-photo-2065747.jpeg" />
+    <Content Include="Views\Home\Images\pexels-photo-2231435.jpeg" />
     <Content Include="Views\Shared\Images\adidas.jpg" />
     <Content Include="Views\Shared\Images\adidas.png" />
+    <Content Include="Views\Shared\Images\pexels-photo-2065747.jpeg" />
+    <Content Include="Views\Shared\Images\pexels-photo-2231435.jpeg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -748,6 +755,11 @@
     <Content Include="Views\OrderDetails\Details.cshtml" />
     <Content Include="Views\OrderDetails\Edit.cshtml" />
     <Content Include="Views\OrderDetails\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
