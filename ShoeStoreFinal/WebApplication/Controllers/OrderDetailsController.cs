@@ -18,8 +18,7 @@ namespace WebApplication.Controllers
         // GET: OrderDetails
         public ActionResult Index()
         {
-            var orderDetails = db.OrderDetails.Include(o => o.Order).Include(o => o.Product);
-            return View(orderDetails.ToList());
+            return View(db.OrderDetails.ToList());
         }
 
         // GET: OrderDetails/Details/5
@@ -40,8 +39,6 @@ namespace WebApplication.Controllers
         // GET: OrderDetails/Create
         public ActionResult Create()
         {
-            ViewBag.Orderid = new SelectList(db.Orders, "Orderid", "UserName");
-            ViewBag.Productid = new SelectList(db.Products, "Productid", "Title");
             return View();
         }
 
@@ -59,8 +56,6 @@ namespace WebApplication.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Orderid = new SelectList(db.Orders, "Orderid", "UserName", orderDetail.Orderid);
-            ViewBag.Productid = new SelectList(db.Products, "Productid", "Title", orderDetail.Productid);
             return View(orderDetail);
         }
 
@@ -76,8 +71,6 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Orderid = new SelectList(db.Orders, "Orderid", "UserName", orderDetail.Orderid);
-            ViewBag.Productid = new SelectList(db.Products, "Productid", "Title", orderDetail.Productid);
             return View(orderDetail);
         }
 
@@ -94,8 +87,6 @@ namespace WebApplication.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Orderid = new SelectList(db.Orders, "Orderid", "UserName", orderDetail.Orderid);
-            ViewBag.Productid = new SelectList(db.Products, "Productid", "Title", orderDetail.Productid);
             return View(orderDetail);
         }
 

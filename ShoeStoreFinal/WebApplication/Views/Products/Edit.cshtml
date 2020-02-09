@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Edit</h2>
@@ -18,17 +19,17 @@
         @Html.HiddenFor(model => model.Productid)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Genreid, "Genreid", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Genreid, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Genreid", null, htmlAttributes: new { @class = "form-control" })
+                @Html.EditorFor(model => model.Genreid, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Genreid, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Brandid, "Brandid", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Brandid, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Brandid", null, htmlAttributes: new { @class = "form-control" })
+                @Html.EditorFor(model => model.Brandid, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Brandid, "", new { @class = "text-danger" })
             </div>
         </div>

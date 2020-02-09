@@ -18,8 +18,7 @@ namespace WebApplication.Controllers
         // GET: Products
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Brand).Include(p => p.Genre);
-            return View(products.ToList());
+            return View(db.Products.ToList());
         }
 
         // GET: Products/Details/5
@@ -40,8 +39,6 @@ namespace WebApplication.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            ViewBag.Brandid = new SelectList(db.Brands, "Brandid", "Name");
-            ViewBag.Genreid = new SelectList(db.Genres, "Genreid", "Name");
             return View();
         }
 
@@ -59,8 +56,6 @@ namespace WebApplication.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Brandid = new SelectList(db.Brands, "Brandid", "Name", product.Brandid);
-            ViewBag.Genreid = new SelectList(db.Genres, "Genreid", "Name", product.Genreid);
             return View(product);
         }
 
@@ -76,8 +71,6 @@ namespace WebApplication.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Brandid = new SelectList(db.Brands, "Brandid", "Name", product.Brandid);
-            ViewBag.Genreid = new SelectList(db.Genres, "Genreid", "Name", product.Genreid);
             return View(product);
         }
 
@@ -94,8 +87,6 @@ namespace WebApplication.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Brandid = new SelectList(db.Brands, "Brandid", "Name", product.Brandid);
-            ViewBag.Genreid = new SelectList(db.Genres, "Genreid", "Name", product.Genreid);
             return View(product);
         }
 
