@@ -14,7 +14,7 @@ namespace ModelsClasses
         public int Brandid { get; set; }
         [Column(Order = 1)]
         public string Name { get; set; }
-        public List<Product> Products { get; set; }
+        //public List<Product> Products { get; set; }
 
     }
 
