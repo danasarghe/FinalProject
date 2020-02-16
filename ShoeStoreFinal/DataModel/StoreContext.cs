@@ -26,7 +26,7 @@ namespace DataModel
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Configure default schema
-            modelBuilder.HasDefaultSchema("Admin");
+            //modelBuilder.HasDefaultSchema("Admin");
 
             //Map entity to table
             modelBuilder.Entity<Product>().ToTable("Product");
