@@ -8,14 +8,10 @@ namespace ModelsClasses
     [Table("Brand")]
     public class Brand
     {
-       
         [Key]
-        [Column(Order = 0)]
         public int Brandid { get; set; }
-        [Column(Order = 1)]
-        public string Name { get; set; }
-        //public List<Product> Products { get; set; }
 
+        public string Name { get; set; }
     }
 
     [Table("Genre")]

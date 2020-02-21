@@ -13,9 +13,8 @@ namespace DataModel
 
         }
 
-
-
         public virtual DbSet<Product> Products { get; set; }
+
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Cart> Carts { get; set; }

@@ -47,12 +47,15 @@ namespace WebApplication1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Brandid,Name")] Brand brand)
+        public ActionResult Create(Brand brand)
         {
             if (ModelState.IsValid)
             {
-                db.Brands.Add(brand);
+                db.Brands.Add(new Brand {
+                Name = brand.Name});
+
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
